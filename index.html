@@ -87,12 +87,13 @@
             </div>
 
             <div class="circuit-canvas">
-                <!-- 测试结果提示移到上方 -->
+                <!-- hint提示移到最上方 -->
+                <div class="canvas-hint" id="canvas-hint">Hint: Click input gate to toggle 0/1; Drag to move gate; Right-click to delete connection</div>
+                <!-- 测试结果提示 -->
                 <div class="test-result-container" id="test-result-container">
                     <span id="test-result">Ready to start...</span>
                 </div>
                 <canvas id="game-canvas" width="800" height="600"></canvas>
-                <div class="canvas-hint" id="canvas-hint">Hint: Click input gate to toggle 0/1; Drag to move gate; Right-click to delete connection</div>
                 <div class="canvas-controls">
                     <button id="undo-btn" title="Undo (Ctrl+Z)">↶ Undo</button>
                     <button id="redo-btn" title="Redo (Ctrl+Y)">↷ Redo</button>

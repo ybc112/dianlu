@@ -591,9 +591,7 @@ header h1 { color: #334155; }
 
 /* 新增：画布内提示浮层样式 */
 .canvas-hint {
-    position: absolute;
-    top: 16px;
-    right: 24px;
+    text-align: right;
     background: var(--surface);
     border: 1px solid #e5e7eb;
     color: #334155;
@@ -601,7 +599,7 @@ header h1 { color: #334155; }
     border-radius: 8px;
     font-size: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    z-index: 10;
+    margin-bottom: 10px;
 }
 
 /* 新增：门悬浮高亮边框 */
