@@ -1,0 +1,1198 @@
+[
+  {
+    "level_id": 1,
+    "name": "AND Gate Basics",
+    "description": "Learn the basic usage of AND gate. Connect inputs to AND gate to see the truth table.",
+    "available_gates": [
+      "AND"
+    ],
+    "fixed_gates": [
+      {
+        "type": "INPUT",
+        "x": 100,
+        "y": 200,
+        "value": false
+      },
+      {
+        "type": "INPUT",
+        "x": 100,
+        "y": 300,
+        "value": false
+      },
+      {
+        "type": "OUTPUT",
+        "x": 500,
+        "y": 250
+      }
+    ],
+    "target_outputs": [
+      false
+    ],
+    "truth_table": [
+      {
+        "inputs": [
+          false,
+          false
+        ],
+        "output": false
+      },
+      {
+        "inputs": [
+          false,
+          true
+        ],
+        "output": false
+      },
+      {
+        "inputs": [
+          true,
+          false
+        ],
+        "output": false
+      },
+      {
+        "inputs": [
+          true,
+          true
+        ],
+        "output": true
+      }
+    ],
+    "max_gates": 20,
+    "hints": [
+      "AND gate outputs true only when all inputs are true",
+      "Try connecting two input switches to the AND gate"
+    ]
+  },
+  {
+    "level_id": 2,
+    "name": "OR Gate Basics",
+    "description": "Learn the basic usage of OR gate. OR outputs true when any input is true.",
+    "available_gates": [
+      "OR"
+    ],
+    "fixed_gates": [
+      {
+        "type": "INPUT",
+        "x": 100,
+        "y": 200,
+        "value": false
+      },
+      {
+        "type": "INPUT",
+        "x": 100,
+        "y": 300,
+        "value": false
+      },
+      {
+        "type": "OUTPUT",
+        "x": 500,
+        "y": 250
+      }
+    ],
+    "target_outputs": [
+      false
+    ],
+    "truth_table": [
+      {
+        "inputs": [
+          false,
+          false
+        ],
+        "output": false
+      },
+      {
+        "inputs": [
+          false,
+          true
+        ],
+        "output": true
+      },
+      {
+        "inputs": [
+          true,
+          false
+        ],
+        "output": true
+      },
+      {
+        "inputs": [
+          true,
+          true
+        ],
+        "output": true
+      }
+    ],
+    "max_gates": 20,
+    "hints": [
+      "OR gate outputs true when any input is true",
+      "Try connecting input switches to the OR gate"
+    ]
+  },
+  {
+    "level_id": 3,
+    "name": "NOT Gate Basics",
+    "description": "Learn the inversion function of NOT gate. NOT inverts the input signal.",
+    "available_gates": [
+      "NOT"
+    ],
+    "fixed_gates": [
+      {
+        "type": "INPUT",
+        "x": 100,
+        "y": 250,
+        "value": false
+      },
+      {
+        "type": "OUTPUT",
+        "x": 500,
+        "y": 250
+      }
+    ],
+    "target_outputs": [
+      true
+    ],
+    "truth_table": [],
+    "max_gates": 20,
+    "hints": [
+      "NOT gate inverts the input signal",
+      "Connect input to NOT gate, then connect to output"
+    ]
+  },
+  {
+    "level_id": 4,
+    "name": "NAND Gate",
+    "description": "NAND is the opposite of AND. It outputs false only when all inputs are true.",
+    "available_gates": [
+      "NAND"
+    ],
+    "fixed_gates": [
+      {
+        "type": "INPUT",
+        "x": 100,
+        "y": 200,
+        "value": false
+      },
+      {
+        "type": "INPUT",
+        "x": 100,
+        "y": 300,
+        "value": false
+      },
+      {
+        "type": "OUTPUT",
+        "x": 500,
+        "y": 250
+      }
+    ],
+    "target_outputs": [
+      true
+    ],
+    "truth_table": [
+      {
+        "inputs": [
+          false,
+          false
+        ],
+        "output": true
+      },
+      {
+        "inputs": [
+          false,
+          true
+        ],
+        "output": true
+      },
+      {
+        "inputs": [
+          true,
+          false
+        ],
+        "output": true
+      },
+      {
+        "inputs": [
+          true,
+          true
+        ],
+        "output": false
+      }
+    ],
+    "max_gates": 20,
+    "hints": [
+      "NAND is NOT + AND combined",
+      "NAND outputs true except when all inputs are true"
+    ]
+  },
+  {
+    "level_id": 5,
+    "name": "NOR Gate",
+    "description": "NOR is the opposite of OR. It outputs true only when all inputs are false.",
+    "available_gates": [
+      "NOR"
+    ],
+    "fixed_gates": [
+      {
+        "type": "INPUT",
+        "x": 100,
+        "y": 200,
+        "value": false
+      },
+      {
+        "type": "INPUT",
+        "x": 100,
+        "y": 300,
+        "value": false
+      },
+      {
+        "type": "OUTPUT",
+        "x": 500,
+        "y": 250
+      }
+    ],
+    "target_outputs": [
+      true
+    ],
+    "truth_table": [
+      {
+        "inputs": [
+          false,
+          false
+        ],
+        "output": true
+      },
+      {
+        "inputs": [
+          false,
+          true
+        ],
+        "output": false
+      },
+      {
+        "inputs": [
+          true,
+          false
+        ],
+        "output": false
+      },
+      {
+        "inputs": [
+          true,
+          true
+        ],
+        "output": false
+      }
+    ],
+    "max_gates": 20,
+    "hints": [
+      "NOR is NOT + OR combined",
+      "NOR outputs true only when NO inputs are true"
+    ]
+  },
+  {
+    "level_id": 6,
+    "name": "XOR Gate",
+    "description": "XOR (Exclusive OR) outputs true when inputs are different.",
+    "available_gates": [
+      "XOR"
+    ],
+    "fixed_gates": [
+      {
+        "type": "INPUT",
+        "x": 100,
+        "y": 200,
+        "value": false
+      },
+      {
+        "type": "INPUT",
+        "x": 100,
+        "y": 300,
+        "value": false
+      },
+      {
+        "type": "OUTPUT",
+        "x": 500,
+        "y": 250
+      }
+    ],
+    "target_outputs": [
+      false
+    ],
+    "truth_table": [
+      {
+        "inputs": [
+          false,
+          false
+        ],
+        "output": false
+      },
+      {
+        "inputs": [
+          false,
+          true
+        ],
+        "output": true
+      },
+      {
+        "inputs": [
+          true,
+          false
+        ],
+        "output": true
+      },
+      {
+        "inputs": [
+          true,
+          true
+        ],
+        "output": false
+      }
+    ],
+    "max_gates": 20,
+    "hints": [
+      "XOR outputs true when inputs are DIFFERENT",
+      "This is also called 'exclusive or'"
+    ]
+  },
+  {
+    "level_id": 7,
+    "name": "AND + NOT Combo",
+    "description": "Combine AND with NOT gate. Learn how to create NAND using basic gates.",
+    "available_gates": [
+      "AND",
+      "NOT"
+    ],
+    "fixed_gates": [
+      {
+        "type": "INPUT",
+        "x": 100,
+        "y": 200,
+        "value": false
+      },
+      {
+        "type": "INPUT",
+        "x": 100,
+        "y": 300,
+        "value": false
+      },
+      {
+        "type": "OUTPUT",
+        "x": 600,
+        "y": 250
+      }
+    ],
+    "target_outputs": [
+      true
+    ],
+    "truth_table": [
+      {
+        "inputs": [
+          false,
+          false
+        ],
+        "output": true
+      },
+      {
+        "inputs": [
+          false,
+          true
+        ],
+        "output": true
+      },
+      {
+        "inputs": [
+          true,
+          false
+        ],
+        "output": true
+      },
+      {
+        "inputs": [
+          true,
+          true
+        ],
+        "output": false
+      }
+    ],
+    "max_gates": 25,
+    "hints": [
+      "Use AND gate first, then NOT gate to invert the result",
+      "This creates a NAND (NOT-AND) function"
+    ]
+  },
+  {
+    "level_id": 8,
+    "name": "OR + NOT Combo",
+    "description": "Combine OR with NOT gate. Learn how to create NOR using basic gates.",
+    "available_gates": [
+      "OR",
+      "NOT"
+    ],
+    "fixed_gates": [
+      {
+        "type": "INPUT",
+        "x": 100,
+        "y": 200,
+        "value": false
+      },
+      {
+        "type": "INPUT",
+        "x": 100,
+        "y": 300,
+        "value": false
+      },
+      {
+        "type": "OUTPUT",
+        "x": 600,
+        "y": 250
+      }
+    ],
+    "target_outputs": [
+      true
+    ],
+    "truth_table": [
+      {
+        "inputs": [
+          false,
+          false
+        ],
+        "output": true
+      },
+      {
+        "inputs": [
+          false,
+          true
+        ],
+        "output": false
+      },
+      {
+        "inputs": [
+          true,
+          false
+        ],
+        "output": false
+      },
+      {
+        "inputs": [
+          true,
+          true
+        ],
+        "output": false
+      }
+    ],
+    "max_gates": 25,
+    "hints": [
+      "Use OR gate first, then NOT gate to invert the result",
+      "This creates a NOR (NOT-OR) function"
+    ]
+  },
+  {
+    "level_id": 9,
+    "name": "AND + OR Combo",
+    "description": "Combine multiple gates together. Build a circuit with both AND and OR.",
+    "available_gates": [
+      "AND",
+      "OR"
+    ],
+    "fixed_gates": [
+      {
+        "type": "INPUT",
+        "x": 80,
+        "y": 150,
+        "value": false
+      },
+      {
+        "type": "INPUT",
+        "x": 80,
+        "y": 250,
+        "value": false
+      },
+      {
+        "type": "INPUT",
+        "x": 80,
+        "y": 350,
+        "value": false
+      },
+      {
+        "type": "OUTPUT",
+        "x": 600,
+        "y": 250
+      }
+    ],
+    "target_outputs": [
+      false
+    ],
+    "truth_table": [
+      {
+        "inputs": [
+          false,
+          false,
+          false
+        ],
+        "output": false
+      },
+      {
+        "inputs": [
+          false,
+          false,
+          true
+        ],
+        "output": true
+      },
+      {
+        "inputs": [
+          false,
+          true,
+          false
+        ],
+        "output": true
+      },
+      {
+        "inputs": [
+          false,
+          true,
+          true
+        ],
+        "output": true
+      },
+      {
+        "inputs": [
+          true,
+          false,
+          false
+        ],
+        "output": true
+      },
+      {
+        "inputs": [
+          true,
+          false,
+          true
+        ],
+        "output": true
+      },
+      {
+        "inputs": [
+          true,
+          true,
+          false
+        ],
+        "output": true
+      },
+      {
+        "inputs": [
+          true,
+          true,
+          true
+        ],
+        "output": true
+      }
+    ],
+    "max_gates": 30,
+    "hints": [
+      "Use AND for first two inputs, then OR with third input",
+      "Think about the logic: (A AND B) OR C"
+    ]
+  },
+  {
+    "level_id": 10,
+    "name": "All Gates Challenge",
+    "description": "Master all basic gates! Use AND, OR, NOT together to solve this puzzle.",
+    "available_gates": [
+      "AND",
+      "OR",
+      "NOT"
+    ],
+    "fixed_gates": [
+      {
+        "type": "INPUT",
+        "x": 80,
+        "y": 150,
+        "value": false
+      },
+      {
+        "type": "INPUT",
+        "x": 80,
+        "y": 250,
+        "value": false
+      },
+      {
+        "type": "OUTPUT",
+        "x": 650,
+        "y": 200
+      }
+    ],
+    "target_outputs": [
+      false
+    ],
+    "truth_table": [
+      {
+        "inputs": [
+          false,
+          false
+        ],
+        "output": true
+      },
+      {
+        "inputs": [
+          false,
+          true
+        ],
+        "output": false
+      },
+      {
+        "inputs": [
+          true,
+          false
+        ],
+        "output": false
+      },
+      {
+        "inputs": [
+          true,
+          true
+        ],
+        "output": true
+      }
+    ],
+    "max_gates": 35,
+    "hints": [
+      "This is XNOR! Outputs true when inputs are the SAME",
+      "Think about when both inputs match"
+    ]
+  },
+  {
+    "level_id": 11,
+    "name": "Three Input Challenge",
+    "description": "Build a circuit with 3 inputs. Output true when at least 2 inputs are true. (Open challenge - use any gates)",
+    "available_gates": [
+      "AND",
+      "OR",
+      "NOT",
+      "NAND",
+      "NOR",
+      "XOR"
+    ],
+    "fixed_gates": [
+      {
+        "type": "INPUT",
+        "x": 80,
+        "y": 150,
+        "value": false
+      },
+      {
+        "type": "INPUT",
+        "x": 80,
+        "y": 250,
+        "value": false
+      },
+      {
+        "type": "INPUT",
+        "x": 80,
+        "y": 350,
+        "value": false
+      },
+      {
+        "type": "OUTPUT",
+        "x": 650,
+        "y": 250
+      }
+    ],
+    "truth_table": [
+      {
+        "inputs": [false, false, false],
+        "output": false
+      },
+      {
+        "inputs": [false, false, true],
+        "output": false
+      },
+      {
+        "inputs": [false, true, false],
+        "output": false
+      },
+      {
+        "inputs": [false, true, true],
+        "output": true
+      },
+      {
+        "inputs": [true, false, false],
+        "output": false
+      },
+      {
+        "inputs": [true, false, true],
+        "output": true
+      },
+      {
+        "inputs": [true, true, false],
+        "output": true
+      },
+      {
+        "inputs": [true, true, true],
+        "output": true
+      }
+    ],
+    "max_gates": 30,
+    "hints": [
+      "This is a 'majority' function - output true when majority are true",
+      "Try combining pairs with AND, then use OR"
+    ]
+  },
+  {
+    "level_id": 12,
+    "name": "Four Input Parity",
+    "description": "Build a circuit with 4 inputs. Output true when an odd number of inputs are true. (Open challenge - use any gates)",
+    "available_gates": [
+      "AND",
+      "OR",
+      "NOT",
+      "NAND",
+      "NOR",
+      "XOR"
+    ],
+    "fixed_gates": [
+      {
+        "type": "INPUT",
+        "x": 80,
+        "y": 120,
+        "value": false
+      },
+      {
+        "type": "INPUT",
+        "x": 80,
+        "y": 220,
+        "value": false
+      },
+      {
+        "type": "INPUT",
+        "x": 80,
+        "y": 320,
+        "value": false
+      },
+      {
+        "type": "INPUT",
+        "x": 80,
+        "y": 420,
+        "value": false
+      },
+      {
+        "type": "OUTPUT",
+        "x": 650,
+        "y": 270
+      }
+    ],
+    "truth_table": [
+      {
+        "inputs": [false, false, false, false],
+        "output": false
+      },
+      {
+        "inputs": [false, false, false, true],
+        "output": true
+      },
+      {
+        "inputs": [false, false, true, false],
+        "output": true
+      },
+      {
+        "inputs": [false, false, true, true],
+        "output": false
+      },
+      {
+        "inputs": [false, true, false, false],
+        "output": true
+      },
+      {
+        "inputs": [false, true, false, true],
+        "output": false
+      },
+      {
+        "inputs": [false, true, true, false],
+        "output": false
+      },
+      {
+        "inputs": [false, true, true, true],
+        "output": true
+      },
+      {
+        "inputs": [true, false, false, false],
+        "output": true
+      },
+      {
+        "inputs": [true, false, false, true],
+        "output": false
+      },
+      {
+        "inputs": [true, false, true, false],
+        "output": false
+      },
+      {
+        "inputs": [true, false, true, true],
+        "output": true
+      },
+      {
+        "inputs": [true, true, false, false],
+        "output": false
+      },
+      {
+        "inputs": [true, true, false, true],
+        "output": true
+      },
+      {
+        "inputs": [true, true, true, false],
+        "output": true
+      },
+      {
+        "inputs": [true, true, true, true],
+        "output": false
+      }
+    ],
+    "max_gates": 35,
+    "hints": [
+      "This is a parity checker - XOR can be chained",
+      "XOR of XOR results gives you the parity"
+    ]
+  },
+  {
+    "level_id": 13,
+    "name": "Boolean Formula: A AND (B OR C)",
+    "description": "Implement the formula: A AND (B OR C). Build the circuit to match this logic.",
+    "formula": "A AND (B OR C)",
+    "available_gates": [
+      "AND",
+      "OR"
+    ],
+    "fixed_gates": [
+      {
+        "type": "INPUT",
+        "x": 80,
+        "y": 150,
+        "value": false
+      },
+      {
+        "type": "INPUT",
+        "x": 80,
+        "y": 250,
+        "value": false
+      },
+      {
+        "type": "INPUT",
+        "x": 80,
+        "y": 350,
+        "value": false
+      },
+      {
+        "type": "OUTPUT",
+        "x": 650,
+        "y": 250
+      }
+    ],
+    "truth_table": [
+      {
+        "inputs": [false, false, false],
+        "output": false
+      },
+      {
+        "inputs": [false, false, true],
+        "output": false
+      },
+      {
+        "inputs": [false, true, false],
+        "output": false
+      },
+      {
+        "inputs": [false, true, true],
+        "output": false
+      },
+      {
+        "inputs": [true, false, false],
+        "output": false
+      },
+      {
+        "inputs": [true, false, true],
+        "output": true
+      },
+      {
+        "inputs": [true, true, false],
+        "output": true
+      },
+      {
+        "inputs": [true, true, true],
+        "output": true
+      }
+    ],
+    "max_gates": 25,
+    "hints": [
+      "First compute (B OR C), then AND with A",
+      "The formula tells you the order of operations"
+    ]
+  },
+  {
+    "level_id": 14,
+    "name": "Boolean Formula: (A OR B) AND (C OR D)",
+    "description": "Implement: (A OR B) AND (C OR D). Use parentheses to guide your circuit design.",
+    "formula": "(A OR B) AND (C OR D)",
+    "available_gates": [
+      "AND",
+      "OR"
+    ],
+    "fixed_gates": [
+      {
+        "type": "INPUT",
+        "x": 80,
+        "y": 120,
+        "value": false
+      },
+      {
+        "type": "INPUT",
+        "x": 80,
+        "y": 220,
+        "value": false
+      },
+      {
+        "type": "INPUT",
+        "x": 80,
+        "y": 320,
+        "value": false
+      },
+      {
+        "type": "INPUT",
+        "x": 80,
+        "y": 420,
+        "value": false
+      },
+      {
+        "type": "OUTPUT",
+        "x": 650,
+        "y": 270
+      }
+    ],
+    "truth_table": [
+      {
+        "inputs": [false, false, false, false],
+        "output": false
+      },
+      {
+        "inputs": [false, false, false, true],
+        "output": false
+      },
+      {
+        "inputs": [false, false, true, false],
+        "output": false
+      },
+      {
+        "inputs": [false, false, true, true],
+        "output": false
+      },
+      {
+        "inputs": [false, true, false, false],
+        "output": false
+      },
+      {
+        "inputs": [false, true, false, true],
+        "output": true
+      },
+      {
+        "inputs": [false, true, true, false],
+        "output": true
+      },
+      {
+        "inputs": [false, true, true, true],
+        "output": true
+      },
+      {
+        "inputs": [true, false, false, false],
+        "output": false
+      },
+      {
+        "inputs": [true, false, false, true],
+        "output": true
+      },
+      {
+        "inputs": [true, false, true, false],
+        "output": true
+      },
+      {
+        "inputs": [true, false, true, true],
+        "output": true
+      },
+      {
+        "inputs": [true, true, false, false],
+        "output": false
+      },
+      {
+        "inputs": [true, true, false, true],
+        "output": true
+      },
+      {
+        "inputs": [true, true, true, false],
+        "output": true
+      },
+      {
+        "inputs": [true, true, true, true],
+        "output": true
+      }
+    ],
+    "max_gates": 30,
+    "hints": [
+      "Build two OR gates first for the parentheses",
+      "Then combine their outputs with an AND gate"
+    ]
+  },
+  {
+    "level_id": 15,
+    "name": "Boolean Formula: NOT(A) AND (B OR NOT(C))",
+    "description": "Implement: NOT(A) AND (B OR NOT(C)). Mix NOT gates with AND and OR.",
+    "formula": "NOT(A) AND (B OR NOT(C))",
+    "available_gates": [
+      "AND",
+      "OR",
+      "NOT"
+    ],
+    "fixed_gates": [
+      {
+        "type": "INPUT",
+        "x": 80,
+        "y": 150,
+        "value": false
+      },
+      {
+        "type": "INPUT",
+        "x": 80,
+        "y": 250,
+        "value": false
+      },
+      {
+        "type": "INPUT",
+        "x": 80,
+        "y": 350,
+        "value": false
+      },
+      {
+        "type": "OUTPUT",
+        "x": 700,
+        "y": 250
+      }
+    ],
+    "truth_table": [
+      {
+        "inputs": [false, false, false],
+        "output": true
+      },
+      {
+        "inputs": [false, false, true],
+        "output": false
+      },
+      {
+        "inputs": [false, true, false],
+        "output": true
+      },
+      {
+        "inputs": [false, true, true],
+        "output": true
+      },
+      {
+        "inputs": [true, false, false],
+        "output": false
+      },
+      {
+        "inputs": [true, false, true],
+        "output": false
+      },
+      {
+        "inputs": [true, true, false],
+        "output": false
+      },
+      {
+        "inputs": [true, true, true],
+        "output": false
+      }
+    ],
+    "max_gates": 35,
+    "hints": [
+      "Start by inverting A and C with NOT gates",
+      "Build the OR part, then AND with NOT(A)"
+    ]
+  },
+  {
+    "level_id": 16,
+    "name": "Five Input Selector",
+    "description": "Build a circuit with 5 inputs. Output true when exactly 3 or more inputs are true. (Open challenge - use any gates)",
+    "available_gates": [
+      "AND",
+      "OR",
+      "NOT",
+      "NAND",
+      "NOR",
+      "XOR"
+    ],
+    "fixed_gates": [
+      {
+        "type": "INPUT",
+        "x": 60,
+        "y": 100,
+        "value": false
+      },
+      {
+        "type": "INPUT",
+        "x": 60,
+        "y": 180,
+        "value": false
+      },
+      {
+        "type": "INPUT",
+        "x": 60,
+        "y": 260,
+        "value": false
+      },
+      {
+        "type": "INPUT",
+        "x": 60,
+        "y": 340,
+        "value": false
+      },
+      {
+        "type": "INPUT",
+        "x": 60,
+        "y": 420,
+        "value": false
+      },
+      {
+        "type": "OUTPUT",
+        "x": 700,
+        "y": 260
+      }
+    ],
+    "truth_table": [
+      {
+        "inputs": [false, false, false, false, false],
+        "output": false
+      },
+      {
+        "inputs": [false, false, false, false, true],
+        "output": false
+      },
+      {
+        "inputs": [false, false, false, true, true],
+        "output": false
+      },
+      {
+        "inputs": [false, false, true, true, true],
+        "output": true
+      },
+      {
+        "inputs": [false, true, true, true, true],
+        "output": true
+      },
+      {
+        "inputs": [true, true, true, true, true],
+        "output": true
+      }
+    ],
+    "max_gates": 40,
+    "hints": [
+      "This is a complex majority circuit",
+      "Consider grouping inputs and checking combinations"
+    ]
+  }
+]

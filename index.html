@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logic Gate Challenge: Circuit Puzzle Lab</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔌 Logic Gate Challenge: Circuit Puzzle Lab</h1>
+            <div class="level-info">
+                <span id="current-level">Level 1</span>
+                <span id="level-name">AND Gate Basics</span>
+            </div>
+        </header>
+
+        <div class="game-area">
+            <div class="sidebar">
+                <div class="level-description">
+                    <h3>Level Description</h3>
+                    <p id="level-desc">Learn the basic usage of AND gate</p>
+                </div>
+                
+                <div class="formula-display" id="formula-container" style="display: none;">
+                    <h3>🎯 Boolean Formula</h3>
+                    <div class="formula-box" id="formula-display"></div>
+                </div>
+
+                <div class="available-gates">
+                    <h3>Available Gates</h3>
+                    <div id="gate-palette" class="gate-palette">
+                        <!-- Dynamically generated available gates -->
+                    </div>
+                </div>
+
+                <div class="truth-table-container">
+                    <h3>Truth Table</h3>
+                    <table id="truth-table">
+                        <!-- Dynamically generated truth table -->
+                    </table>
+                </div>
+
+                <div class="hints">
+                    <h3>Hints</h3>
+                    <ul id="hints-list">
+                        <!-- Dynamically generated hints -->
+                    </ul>
+                </div>
+                
+                <div class="gate-guide">
+                    <h3>Gate Colors Guide</h3>
+                    <div class="gate-color-item">
+                        <span class="color-box input-color"></span>
+                        <span>INPUT (Click to toggle)</span>
+                    </div>
+                    <div class="gate-color-item">
+                        <span class="color-box output-color"></span>
+                        <span>OUTPUT (Result)</span>
+                    </div>
+                    <div class="gate-color-item">
+                        <span class="color-box and-color"></span>
+                        <span>AND (All true)</span>
+                    </div>
+                    <div class="gate-color-item">
+                        <span class="color-box or-color"></span>
+                        <span>OR (Any true)</span>
+                    </div>
+                    <div class="gate-color-item">
+                        <span class="color-box not-color"></span>
+                        <span>NOT (Invert)</span>
+                    </div>
+                    <div class="gate-color-item">
+                        <span class="color-box nand-color"></span>
+                        <span>NAND</span>
+                    </div>
+                    <div class="gate-color-item">
+                        <span class="color-box nor-color"></span>
+                        <span>NOR</span>
+                    </div>
+                    <div class="gate-color-item">
+                        <span class="color-box xor-color"></span>
+                        <span>XOR (Different)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="circuit-canvas">
+                <!-- 测试结果提示移到上方 -->
+                <div class="test-result-container" id="test-result-container">
+                    <span id="test-result">Ready to start...</span>
+                </div>
+                <canvas id="game-canvas" width="800" height="600"></canvas>
+                <div class="canvas-hint" id="canvas-hint">Hint: Click input gate to toggle 0/1; Drag to move gate; Right-click to delete connection</div>
+                <div class="canvas-controls">
+                    <button id="undo-btn" title="Undo (Ctrl+Z)">↶ Undo</button>
+                    <button id="redo-btn" title="Redo (Ctrl+Y)">↷ Redo</button>
+                    <button id="connect-mode">Connect Mode</button>
+                    <button id="test-circuit">Test Circuit</button>
+                    <button id="clear-circuit">Clear Circuit</button>
+                    <button id="next-level" disabled>Next Level</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="status-bar">
+            <div class="status-item">
+                <span>Gates Used: </span>
+                <span id="gate-count">0</span>
+                <span>/</span>
+                <span id="max-gates">20</span>
+            </div>
+            <div class="status-item">
+                <span id="test-result">Ready to start...</span>
+            </div>
+            <div class="status-item">
+                <span>Completed: </span>
+                <span id="completed-count">0</span>
+                <span>/</span>
+                <span id="total-levels">10</span>
+            </div>
+        </div>
+
+        <div class="level-selector">
+            <h3>Select Level</h3>
+            <div id="level-buttons">
+                <!-- Dynamically generated level buttons -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Dialog -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content">
+            <h2>🎉 Congratulations!</h2>
+            <p>You have successfully completed this level!</p>
+            <div class="modal-buttons">
+                <button id="next-level-modal">Next Level</button>
+                <button id="close-modal">Stay Here</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Gate Confirmation Dialog -->
+    <div id="delete-modal" class="modal">
+        <div class="modal-content">
+            <h2>🗑️ Delete Gate</h2>
+            <p id="delete-message">Delete this gate?</p>
+            <div class="modal-buttons">
+                <button id="delete-yes">Yes</button>
+                <button id="delete-no">No</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
