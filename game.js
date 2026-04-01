@@ -93,8 +93,10 @@ class GameState {
         }
 
         document.addEventListener('click', (e) => {
-            if (e.target.classList && e.target.classList.contains('gate-item')) {
-                this.addGate(e.target.dataset.type);
+            // 查找最近的gate-item祖先元素（因为点击的可能是SVG内部）
+            const gateItem = e.target.closest('.gate-item');
+            if (gateItem && gateItem.dataset.type) {
+                this.addGate(gateItem.dataset.type);
             }
         });
     }
